@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Všechno nejlepší!</title>
+  <link rel="stylesheet" href="style1.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+</head>
+<body>
+    <header id="tetris-header" class="tetris-grid"></header>
+  
+    <aside id="left-sidebar" class="sidebar tetris-grid"></aside>
+    
+  
+    <main>
+      <section class="card">
+      <h1>Všechno nejlepší k narozeninám!</h1>
+    </section>
+  
+    <!-- Random Cat -->
+  <section class="card">
+    <h2>Všecko by mělo začínat kočkou. </h2>
+    <div id="random-cat"></div>
+  </section>
+
+  <!-- Sad Portuguese Song -->
+  <section class="card">
+    <h2>Vyber si jeden z těchto bangerů</h2>
+    <!-- Example with YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4eyu8i8Jt8I?si=VpuabIid8qEVyDhN&amp;?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/92ydUdqWE1g?si=xr5PYlyWWCBtVq5K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- Or with Spotify (replace SONG_ID) -->
+    <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/SONG_ID" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> -->
+  </section>
+
+      <!-- COUNTDOWN -->
+  <section id="countdown" class="card">
+    <h2>Narozeninovej odpočet</h2>
+    <div id="countdown-timer" class="countdown-timer">Loading…</div>
+    <div class="countdown-sub">do příštího dvacátého srpna</div>
+  </section>
+
+  <!-- WEATHER -->
+  <section id="weather" class="card">
+    <h2>Počasí — Faro, Portugalsko</h2>
+    <div id="weather-current" class="weather-current">Loading…</div>
+    <div id="weather-forecast" class="weather-forecast-grid"></div>
+  </section>
+
+  <!-- JEWISH HOLIDAYS -->
+  <section class="card">
+ <h2>Židovské svátky v příštím roce</h2>
+</section>
+
+  <section id="calendar" class="card">
+     <!-- <ul id="calendar-list" class="calendar-list">Loading…</ul>-->
+  </section>
+
+  <!-- QUEER BOOK GENERATOR -->
+  <section id="books" class="card">
+    <h2>Možný queer book klubík doporučení?</h2>
+    <button id="book-btn" class="btn">Generátor</button>
+    <div id="book-result" class="book-result"></div>
+  </section>
+  
+  <section class="card">
+    <h2>Jumpscary z mojí galerie</h2>
+    <div id="random-photo"></div>
+  </section>
+
+  
+
+
+  <!-- Cookies Warning -->
+  <div id="cookie-warning">
+    Navštívením této stránky souhlasíte s tím, že leváci jsou objektivně lepší <button id="close-cookie">OK</button>
+  </div>
+
+  
+
+  <!-- Gallery -->
+  <section class="card">
+    <h2>Galerie eneftéček</h2>
+    <div id="gallery">
+      <img src="Galerie/galerie3.png" alt="">     
+      <img src="Galerie/galerie1.png" alt="">
+      <img src="Galerie/galerie5.png" alt=""> 
+      <img src="Galerie/galerie2.png" alt="">
+      <img src="Galerie/galerie4.png" alt="">
+      <img src="Galerie/galerie6.png" alt="">
+      <img src="Galerie/galerie7.png" alt="">
+      <img src="Galerie/galerie8.png" alt="">
+
+      
+      
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Recept na dnešní den - ze stránek Peče celá země ze nesmí krást smh</h2>
+      Pokud je 17.11. je čas na perníčky
+    <div id="recipe"></div>
+  </section>
+
+  <section id="person-of-the-day" class="card">
+    <h2>Osobnost, ze které si dnes vzít příklad</h2>
+    <div id="person-container">
+      <img id="person-image" src="" alt="Person of the Day">
+      <h3 id="person-name"></h3>
+      <p id="person-bio"></p>
+    </div>
+  </section>
+  
+  <section class="card">
+    <h2>Děkujeme za pozornost?</h2>
+    <div id="gallery">
+      <img src="Konecna/konecna1.png" alt="">
+      
+    </div>
+  </section>
+
+
+
+  <img id="easter-egg" src="Konecna/konecna2.png" alt="Easter Egg">
+</main>
+
+<script>
+    // Random photos
+    const photos = ["Klárka/klarka1.jpg", "Klárka/klarka2.jpg","Klárka/klarka3.jpg","Klárka/klarka4.jpg","Klárka/klarka5.jpg","Klárka/klarka6.jpg","Klárka/klarka7.jpg","Klárka/klarka8.jpg","Klárka/klarka9.jpg","Klárka/klarka10.jpg","Klárka/klarka11.jpg","Klárka/klarka12.jpg","Klárka/klarka13.jpg","Klárka/klarka14.jpg","Klárka/klarka15.jpg","Klárka/klarka16.jpg","Klárka/klarka17.jpg","Klárka/klarka18.jpg","Klárka/klarka19.jpg","Klárka/klarka20.jpg","Klárka/klarka21.jpg","Klárka/klarka22.jpg","Klárka/klarka23.jpg","Klárka/klarka24.jpg","Klárka/klarka25.jpg","Klárka/klarka26.jpg","Klárka/klarka27.jpg","Klárka/klarka28.jpg","Klárka/klarka29.jpg","Klárka/klarka30.jpg","Klárka/klarka31.jpg","Klárka/klarka32.jpg","Klárka/klarka33.jpg","Klárka/klarka34.png","Klárka/klarka35.png","Klárka/klarka36.png","Klárka/klarka37.jpg","Klárka/klarka38.jpg","Klárka/klarka39.jpg","Klárka/klarka40.jpg","Klárka/klarka41.jpg","Klárka/klarka42.jpg","Klárka/klarka43.jpg","Klárka/klarka44.jpg","Klárka/klarka45.jpg","Klárka/klarka46.png","Klárka/klarka47.jpg",];
+    const cats = ["Kocka/kocka1.jpg","Kocka/kocka2.jpg","Kocka/kocka3.jpg","Kocka/kocka4.jpg","Kocka/kocka5.jpg","Kocka/kocka6.jpg","Kocka/kocka7.jpg","Kocka/kocka8.jpg","Kocka/kocka9.jpg","Kocka/kocka10.jpg","Kocka/kocka11.jpg","Kocka/kocka12.jpg","Kocka/kocka13.jpg","Kocka/kocka14.jpg","Kocka/kocka15.jpg","Kocka/kocka16.jpg","Kocka/kocka17.jpg","Kocka/kocka18.jpg","Kocka/kocka19.jpg","Kocka/kocka20.jpg","Kocka/kocka21.jpg","Kocka/kocka22.jpg","Kocka/kocka23.jpg","Kocka/kocka24.jpg","Kocka/kocka25.jpg","Kocka/kocka26.jpg","Kocka/kocka27.jpg","Kocka/kocka28.jpg","Kocka/kocka29.jpg","Kocka/kocka30.jpg",];
+    
+    function pickRandom(arr) {
+      return arr[Math.floor(Math.random() * arr.length)];
+    }
+    
+    document.getElementById("random-photo").innerHTML = `<img src="${pickRandom(photos)}" style="max-width:30%;">`;
+    document.getElementById("random-cat").innerHTML = `<img src="${pickRandom(cats)}" style="max-width:100%;">`;
+    
+    // Cookie warning close
+    document.getElementById("close-cookie").addEventListener("click", () => {
+      document.getElementById("cookie-warning").style.display = "none";
+    });
+  </script>
+    
+    <script>
+      async function loadRecipe() {
+        const res = await fetch("https://www.themealdb.com/api/json/v1/1/random.php");
+        const data = await res.json();
+        const meal = data.meals[0];
+        document.getElementById("recipe").innerHTML = `
+          <h3>${meal.strMeal}</h3>
+          <img src="${meal.strMealThumb}" style="max-width:30%; border-radius:8px;">
+          <p><b>Category:</b> ${meal.strCategory}</p>
+          <p><b>Area:</b> ${meal.strArea}</p>
+          <p>${meal.strInstructions.slice(0,250)}...</p>
+          <a href="${meal.strSource}" target="_blank">See full recipe</a>
+        `;
+      }
+      loadRecipe();
+      </script>
+    
+    <script src="script1.js"></script>
+
+    
+
+  </body>
+</html>
