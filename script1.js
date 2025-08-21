@@ -531,12 +531,12 @@ const people = [
   {
     "name": "Tetris kid",
     "image": "People/people5.jpg",
-    "bio": "Třináctiletý chlapec z Oklahomy, který dohrál tetris?"
+    "bio": "Třináctiletý chlapec z Oklahomy, který dohrál tetris"
   },
   {
     "name": "Hank Green",
     "image": "People/people4.jpg",
-    "bio": "Expert na tuberkulózu, letadla a nevimcoještě"
+    "bio": "Expert na tuberkulózu a letadla"
   },
   {
     "name": "Lukáš Krtek Koucký",
@@ -571,7 +571,7 @@ const people = [
   {
     "name": "Martin Kapoun",
     "image": "People/people12.jpg",
-    "bio": "Z jeho zrzavé kštice zbyly čtyři vlasy posvátné krávy"
+    "bio": "Z jeho zrzavé kštice zbyly pouze čtyři vlasy posvátné krávy"
   },
   {
     "name": "Tereza? Lišková",
@@ -581,7 +581,7 @@ const people = [
   {
     "name": "Josef Maršálek",
     "image": "People/people14.jpg",
-    "bio": "Prostě borec idk"
+    "bio": "Oblíbený člen uměleckého dua, které tvoří s paní Mirkou"
   },
   {
     "name": "Tereza Kostková",
@@ -598,4 +598,5 @@ function loadPerson() {
 }
 
 window.addEventListener("DOMContentLoaded", loadPerson);
+
 
